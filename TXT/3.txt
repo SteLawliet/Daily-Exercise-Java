@@ -1,0 +1,27 @@
+4
+package IoSteam;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+/**
+ * Created by Stelawliet on 17/9/20.赵子齐
+ */
+public class buffedIO {
+    public static void main(String[] args) throws IOException{
+        BufferedReader bufferedReader0 = new BufferedReader(new FileReader("a.txt"));
+        BufferedWriter bufferedWriter0 = new BufferedWriter(new FileWriter("d.txt"));
+
+        String line = null;
+        while ((line = bufferedReader0.readLine() )!=null){
+            bufferedWriter0.write(line);
+            bufferedWriter0.newLine();
+            bufferedWriter0.flush();
+        }
+        bufferedReader0.close();
+        bufferedWriter0.close();
+    }
+}
